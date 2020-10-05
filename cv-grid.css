@@ -255,7 +255,7 @@ hr.rule-skills{
 
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1080px){
     .cv-grid {
         display: flex;
         flex-direction: column;
