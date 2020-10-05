@@ -12,13 +12,21 @@ body, html {
 .cv-grid {
     /* Colors */
     --primary-bg: #f9f9f9;
-    --secondary-bg: #ff4d00;
-    --top-bg: #515151;
-    --accent-bg: blue;
+    --secondary-bg: #BCE784;
+    --tertiary-bg: #48A9A6;
+    --quaternary-bg: #cecece;
+    --top-bg: #4C5760;
+    
 
-    --primary-text: #000;
+    --primary-text: #4C5760;
     --secondary-text: #fff;
+    --tertiary-text: #fff;
     --date-text: #515151;
+    --secondary-date-text: #fff;
+
+    --primary-grad: 76 , 87 , 96; 
+    --secondary-grad: 255, 255, 255;
+   
 
     --stagger-delay: 50ms;
 
@@ -133,9 +141,15 @@ body, html {
     width: 100%;
     padding: 0.5rem 2rem;
     box-sizing: border-box;
-    background-color: var(--secondary-bg);
     text-transform: uppercase;
+    background-color: var(--secondary-bg);
     color: var(--secondary-text);
+}
+
+/* alternate class for card header  */
+.heading-container.secondary {
+    background-color: var(--tertiary-bg);
+    color: var(--tertiary-text);
 }
 
 /* continer for content within card below heading */
@@ -150,6 +164,12 @@ body, html {
     align-items: left;
     padding: 0rem 2rem;
     overflow: hidden
+}
+
+/* alternate class for card content  */
+.content-container.secondary {
+    background-color: var(--quaternary-bg);
+    
 }
 
 .content-para {
@@ -200,6 +220,11 @@ body, html {
     padding-left: 0;
 }
 
+.skill-list > li {
+    font-size: 2rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
 .skill-list > li:hover {
     transition: color 100ms ease-in;
     color: white;
@@ -238,15 +263,12 @@ body, html {
 hr.rule {
     width: 100%;
     border: none;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba( var(--primary-grad) , 0), rgba(var(--primary-grad) , 0.75), rgba(var(--primary-grad) , 0));
     height: 2px;
 }
 
 hr.rule-skills{
-    width: 50%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-    height: 2px;
-    border: none;
+    display: none;
 }
 
 
@@ -275,4 +297,13 @@ hr.rule-skills{
     .content-container {
         padding: 1rem 2rem;
     }
+
+    hr.rule-skills{
+        display: block;
+        width: 50%;
+        background: linear-gradient(to right, rgba(var(--secondary-grad), 0), rgba(var(--secondary-grad), 0.75), rgba(var(--secondary-grad), 0));
+        height: 2px;
+        border: none;
+    }
+    
 }
